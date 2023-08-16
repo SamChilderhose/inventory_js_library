@@ -1,4 +1,4 @@
-# js-library-childer6
+# Inventory js-library
 Landing Page: https://stylishinventory.herokuapp.com
 
 About The Library:

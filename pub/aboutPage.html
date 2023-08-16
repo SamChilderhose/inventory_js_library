@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" href="stylishInventory/library.css">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style>
+        body, html {
+          height: 100%;
+          margin: 0;
+          font-family: Arial, Helvetica, sans-serif;
+          background-color: #fffcf7;
+
+        }
+
+        .headerImage {
+          background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("images/documentationHeader.jpeg");
+          height: 50%;
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+          position: relative;
+        }
+
+        .imageText {
+          text-align: center;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          color: white;
+        }
+
+        .homePageButton {
+          border: none;
+          border-radius: 20px;
+          outline: 0;
+          display: inline-block;
+          padding: 10px 25px;
+          color: black;
+          background-color: #ddd;
+          text-align: center;
+          cursor: pointer;
+          font-weight: bold;
+          color: grey;
+        }
+
+        .homePageButton:hover {
+          background-color: #555;
+          color: white;
+        }
+    </style>
+
+
+</head>
+<body>
+
+    <div class="headerImage">
+      <div class="imageText">
+        <h1 class="cardFadeIn0" style="font-size:50px">API DOCUMENTATION</h1>
+        <p class="cardFadeIn1">How to Use Stylish Inventory</p>
+        <a href="homepage.html">
+            <button class="homePageButton cardFadeIn2">HOME</button>
+        </a>
+      </div>
+    </div>
+
+<div style="width: 800px; display: block; margin: auto;">
+
+<h1><u>About The Library</u><u>:</u></h1>
+<p>Stylish Inventory is a JavaScript library for displaying any type of products or inventory in a pattern with each item having it&apos;s own individual card. Each card displays the relevant information such as title, description, price, whether its in stock and a &quot;purchase&quot; button for adding it to a cart. The library keeps track of which and how many items are available to purchase and the end user is able to view and edit what&apos;s in their cart from the cart button.&nbsp;</p>
+<p><br></p>
+<h1><u>Getting Started:</u></h1>
+<p>All attributes and methods are made by calling on an instance of ProductDisplayGenerator().</p>
+<p><code>stylishInstance = ProductDisplayGenereator()</code></p>
+<p>Once instantiated, an instance of Stylish Inventory has the following attributes:</p>
+<table style="width: 100%; padding: 2px; border-collapse: collapse; border: 2px solid rgb(0, 0, 0);">
+    <tbody>
+        <tr>
+            <td style="width: 26.8025%; border: 2px solid rgb(0, 0, 0); padding: 2px;">
+                <div data-empty="true" style="text-align: center;"><strong>Property</strong></div>
+            </td>
+            <td style="width: 19.4357%; border: 2px solid rgb(0, 0, 0); padding: 2px;">
+                <div data-empty="true" style="text-align: center;"><strong>Default</strong></div>
+            </td>
+            <td style="width: 19.7492%; border: 2px solid rgb(0, 0, 0); padding: 2px;">
+                <div style="text-align: center;"><strong>Type</strong></div>
+            </td>
+            <td style="width: 34.0125%; border: 2px solid rgb(0, 0, 0); padding: 2px;">
+                <div data-empty="true" style="text-align: center;"><strong>Description</strong></div>
+            </td>
+        </tr>
+        <tr>
+            <td style="width: 26.8025%; border: 2px solid rgb(0, 0, 0); padding: 2px;">
+                <div data-empty="true" style="text-align: center;">stylishInstance.cards</div>
+            </td>
+            <td style="width: 19.4357%; border: 2px solid rgb(0, 0, 0); padding: 2px;">
+                <div data-empty="true" style="text-align: center;"><code>[]</code></div>
+            </td>
+            <td style="width: 19.7492%; border: 2px solid rgb(0, 0, 0); padding: 2px;">
+                <div data-empty="true" style="text-align: center;">array</div>
+            </td>
+            <td style="width: 34.0125%; border: 2px solid rgb(0, 0, 0); padding: 2px;">
+                <div data-empty="true" style="text-align: center;">An array of all the product cards that have been created.</div>
+            </td>
+        </tr>
+        <tr>
+            <td style="width: 26.8025%; border: 2px solid rgb(0, 0, 0); padding: 2px;">
+                <div data-empty="true" style="text-align: center;">stylishInstance.cart</div>
+                <ul>
+                    <li style="text-align: center;">cart.items</li>
+                    <li style="text-align: center;">cart.total</li>
+                </ul>
+            </td>
+            <td style="width: 19.4357%; border: 2px solid rgb(0, 0, 0); padding: 2px;">
+                <div data-empty="true" style="text-align: center;"><code>{</code></div>
+                <div data-empty="true" style="text-align: center;"><code>items: [],</code></div>
+                <div data-empty="true" style="text-align: center;"><code>total: 0.0,</code></div>
+                <div data-empty="true" style="text-align: center;"><code>}</code></div>
+            </td>
+            <td style="width: 19.7492%; border: 2px solid rgb(0, 0, 0); padding: 2px;">
+                <div data-empty="true" style="text-align: center;">js object</div>
+                <ul>
+                    <li style="text-align: center;">array</li>
+                    <li style="text-align: center;">float</li>
+                </ul>
+            </td>
+            <td style="width: 34.0125%; border: 2px solid rgb(0, 0, 0); padding: 2px;">
+                <div data-empty="true" style="text-align: center;">The end-user&apos;s cart. Items is an array of all the products that they&apos;ve added to their cart and total is the sum cost of those products</div>
+            </td>
+        </tr>
+        <tr>
+            <td style="width: 26.8025%; border: 2px solid rgb(0, 0, 0); padding: 2px;">
+                <div data-empty="true" style="text-align: center;">stylishInstance.numCards</div>
+            </td>
+            <td style="width: 19.4357%; border: 2px solid rgb(0, 0, 0); padding: 2px;">
+                <div data-empty="true" style="text-align: center;"><code>0</code></div>
+            </td>
+            <td style="width: 19.7492%; border: 2px solid rgb(0, 0, 0); padding: 2px;">
+                <div data-empty="true" style="text-align: center;">int</div>
+            </td>
+            <td style="width: 34.0125%; border: 2px solid rgb(0, 0, 0); padding: 2px;">
+                <div data-empty="true" style="text-align: center;">The total number of product cards</div>
+            </td>
+        </tr>
+        <tr>
+            <td style="width: 26.8025%; border: 2px solid rgb(0, 0, 0); padding: 2px;">
+                <div data-empty="true" style="text-align: center;">stylishInstance.numPages</div>
+            </td>
+            <td style="width: 19.4357%; border: 2px solid rgb(0, 0, 0); padding: 2px;">
+                <div data-empty="true" style="text-align: center;"><code>0</code></div>
+            </td>
+            <td style="width: 19.7492%; border: 2px solid rgb(0, 0, 0); padding: 2px;">
+                <div data-empty="true" style="text-align: center;">int</div>
+            </td>
+            <td style="width: 34.0125%; border: 2px solid rgb(0, 0, 0); padding: 2px;">
+                <div data-empty="true" style="text-align: center;">The total number of product card pages used to display all the cards. Each page can display 6</div>
+            </td>
+        </tr>
+        <tr>
+            <td style="width: 26.8025%; border: 2px solid rgb(0, 0, 0); padding: 2px;">
+                <div data-empty="true" style="text-align: center;">stylishInstance.currPage</div>
+            </td>
+            <td style="width: 19.4357%; border: 2px solid rgb(0, 0, 0); padding: 2px;">
+                <div style="text-align: center;"><code>0</code></div>
+            </td>
+            <td style="width: 19.7492%; border: 2px solid rgb(0, 0, 0); padding: 2px;">
+                <div data-empty="true" style="text-align: center;">int</div>
+            </td>
+            <td style="width: 34.0125%; border: 2px solid rgb(0, 0, 0); padding: 2px;">
+                <div data-empty="true" style="text-align: center;">The current page of product cards that is being displayed. The value is one less than the actual page number.</div>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<p>The product cards themselves are js objects with the following attributes</p>
+<table style="width: 100%; padding: 3px; border-collapse: collapse; border: 2px solid rgb(0, 0, 0);">
+    <tbody>
+        <tr>
+            <td style="width: 26.6366%; border: 2px solid rgb(0, 0, 0); padding: 3px;">
+                <div style="text-align: center;"><strong>Property</strong></div>
+            </td>
+            <td style="width: 19.4595%; border: 2px solid rgb(0, 0, 0); padding: 3px;">
+                <div style="text-align: center;"><strong>Type</strong></div>
+            </td>
+            <td style="width: 19.955%; border: 2px solid rgb(0, 0, 0); padding: 3px;">
+                <div style="text-align: center;"><strong>Default</strong></div>
+            </td>
+            <td style="width: 33.7988%; border: 2px solid rgb(0, 0, 0); padding: 3px;">
+                <div style="text-align: center;"><strong>Description</strong></div>
+            </td>
+        </tr>
+        <tr>
+            <td style="width: 26.6366%; border: 2px solid rgb(0, 0, 0); padding: 3px;">
+                <div style="text-align: center;">card.cardDiv</div>
+            </td>
+            <td style="width: 19.4595%; border: 2px solid rgb(0, 0, 0); padding: 3px;">
+                <div style="text-align: center;">html element</div>
+            </td>
+            <td style="width: 19.955%; border: 2px solid rgb(0, 0, 0); padding: 3px;"><br></td>
+            <td style="width: 33.7988%; border: 2px solid rgb(0, 0, 0); padding: 3px;">The element that has all the visual parts are the the product card. The id of the container is the same of the product card id</td>
+        </tr>
+        <tr>
+            <td style="width: 26.6366%; border: 2px solid rgb(0, 0, 0); padding: 3px;">
+                <div style="text-align: center;">card.price</div>
+            </td>
+            <td style="width: 19.4595%; border: 2px solid rgb(0, 0, 0); padding: 3px;">
+                <div style="text-align: center;">float</div>
+            </td>
+            <td style="width: 19.955%; border: 2px solid rgb(0, 0, 0); padding: 3px;"><br></td>
+            <td style="width: 33.7988%; border: 2px solid rgb(0, 0, 0); padding: 3px;">The cost of the individual product</td>
+        </tr>
+        <tr>
+            <td style="width: 26.6366%; border: 2px solid rgb(0, 0, 0); padding: 3px;">
+                <div style="text-align: center;">card.stock</div>
+            </td>
+            <td style="width: 19.4595%; border: 2px solid rgb(0, 0, 0); padding: 3px;">
+                <div style="text-align: center;">int</div>
+            </td>
+            <td style="width: 19.955%; border: 2px solid rgb(0, 0, 0); padding: 3px;"><br></td>
+            <td style="width: 33.7988%; border: 2px solid rgb(0, 0, 0); padding: 3px;">The quantity of this product available for purchase</td>
+        </tr>
+        <tr>
+            <td style="width: 26.6366%; border: 2px solid rgb(0, 0, 0); padding: 3px;">
+                <div style="text-align: center;">card.cardId</div>
+            </td>
+            <td style="width: 19.4595%; border: 2px solid rgb(0, 0, 0); padding: 3px;">
+                <div style="text-align: center;">int</div>
+            </td>
+            <td style="width: 19.955%; border: 2px solid rgb(0, 0, 0); padding: 3px;"><br></td>
+            <td style="width: 33.7988%; border: 2px solid rgb(0, 0, 0); padding: 3px;">The unique id for this product</td>
+        </tr>
+        <tr>
+            <td style="width: 26.6366%; border: 2px solid rgb(0, 0, 0); padding: 3px;">
+                <div style="text-align: center;">card.imgPath</div>
+            </td>
+            <td style="width: 19.4595%; border: 2px solid rgb(0, 0, 0); padding: 3px;">
+                <div style="text-align: center;">string</div>
+            </td>
+            <td style="width: 19.955%; border: 2px solid rgb(0, 0, 0); padding: 3px;"><br></td>
+            <td style="width: 33.7988%; border: 2px solid rgb(0, 0, 0); padding: 3px;">The path to the product image</td>
+        </tr>
+        <tr>
+            <td style="width: 26.6366%; border: 2px solid rgb(0, 0, 0); padding: 3px;">
+                <div style="text-align: center;">card.bgColor</div>
+            </td>
+            <td style="width: 19.4595%; border: 2px solid rgb(0, 0, 0); padding: 3px;">
+                <div style="text-align: center;">string</div>
+            </td>
+            <td style="width: 19.955%; border: 2px solid rgb(0, 0, 0); padding: 3px;"><br></td>
+            <td style="width: 33.7988%; border: 2px solid rgb(0, 0, 0); padding: 3px;">The background color of the product image. It recommended to use images with transparent backgrounds as your product images</td>
+        </tr>
+        <tr>
+            <td style="width: 26.6366%; border: 2px solid rgb(0, 0, 0); padding: 3px;">
+                <div style="text-align: center;">card.productName</div>
+            </td>
+            <td style="width: 19.4595%; border: 2px solid rgb(0, 0, 0); padding: 3px;">
+                <div style="text-align: center;">string</div>
+            </td>
+            <td style="width: 19.955%; border: 2px solid rgb(0, 0, 0); padding: 3px;"><br></td>
+            <td style="width: 33.7988%; border: 2px solid rgb(0, 0, 0); padding: 3px;">The name of the product</td>
+        </tr>
+        <tr>
+            <td style="width: 26.6366%; border: 2px solid rgb(0, 0, 0); padding: 3px;">
+                <div style="text-align: center;">card.productDescription</div>
+            </td>
+            <td style="width: 19.4595%; border: 2px solid rgb(0, 0, 0); padding: 3px;">
+                <div style="text-align: center;">string</div>
+            </td>
+            <td style="width: 19.955%; border: 2px solid rgb(0, 0, 0); padding: 3px;"><br></td>
+            <td style="width: 33.7988%; border: 2px solid rgb(0, 0, 0); padding: 3px;">The description of the product</td>
+        </tr>
+    </tbody>
+</table>
+<p>To create a display of product cards, first you must create the cards by calling on the methods makeProductCard or makeProductCardsByArray (see below for more detail in methods section).</p>
+<p>Example Starter Code:</p>
+<p><code>stylishInstance.makeProductCard(&quot;white&quot;, &quot;title&quot;, &quot;description&quot;, &quot;/images/example.jpeg&quot;, 0.0, 3})</code></p>
+<p><code>stylishInstance.displayCart()</code></p>
+<p><code><code>stylishInstance</code>.displayCartBtn()</code></p>
+<p><code><code>stylishInstance</code>.displayCards()</code></p>
+<h1><u>Methods:</u></h1>
+<p>All of the following methods require you to have created an instance of Stylish Inventory by calling ProductDisplayGenerator(). All methods called make changes to that specific instance and not any other instances.</p>
+<p style="text-align: left;"><span style="font-family: Helvetica;"><strong><span style="font-size: 20px;">.makeProductCard(bgColor, title, description, imgPath, price, selectBtn, stock)<br></span></strong></span></p>
+<p>Creates a product card and appends it to the card list.</p>
+<table style="width: 100%; padding: 3px; border-collapse: collapse; border: 2px solid rgb(0, 0, 0);">
+    <tbody>
+        <tr>
+            <td style="width: 25%; border: 2px solid rgb(0, 0, 0); padding: 3px;"><strong>Argument</strong></td>
+            <td style="width: 25%; border: 2px solid rgb(0, 0, 0); padding: 3px;"><strong>Type</strong></td>
+            <td style="width: 24.9249%; border: 2px solid rgb(0, 0, 0); padding: 3px;"><strong>Default</strong></td>
+            <td style="width: 24.9249%; border: 2px solid rgb(0, 0, 0); padding: 3px;"><strong>Description</strong></td>
+        </tr>
+        <tr>
+            <td style="width: 25%; border: 2px solid rgb(0, 0, 0); padding: 3px;">
+                <div style="text-align: center;">bgColor</div>
+            </td>
+            <td style="width: 25%; border: 2px solid rgb(0, 0, 0); padding: 3px;">
+                <div style="text-align: center;">str</div>
+            </td>
+            <td style="width: 24.9249%; border: 2px solid rgb(0, 0, 0); padding: 3px;"><br></td>
+            <td style="width: 24.9249%; border: 2px solid rgb(0, 0, 0); padding: 3px;">A string of the color to be made the background of product image</td>
+        </tr>
+        <tr>
+            <td style="width: 25%; border: 2px solid rgb(0, 0, 0); padding: 3px;">
+                <div style="text-align: center;">title</div>
+            </td>
+            <td style="width: 25%; border: 2px solid rgb(0, 0, 0); padding: 3px;">
+                <div style="text-align: center;">str</div>
+            </td>
+            <td style="width: 24.9249%; border: 2px solid rgb(0, 0, 0); padding: 3px;"><br></td>
+            <td style="width: 24.9249%; border: 2px solid rgb(0, 0, 0); padding: 3px;">The name of the product</td>
+        </tr>
+        <tr>
+            <td style="width: 25%; border: 2px solid rgb(0, 0, 0); padding: 3px;">
+                <div style="text-align: center;">description</div>
+            </td>
+            <td style="width: 25%; border: 2px solid rgb(0, 0, 0); padding: 3px;">
+                <div style="text-align: center;">str</div>
+            </td>
+            <td style="width: 24.9249%; border: 2px solid rgb(0, 0, 0); padding: 3px;"><br></td>
+            <td style="width: 24.9249%; border: 2px solid rgb(0, 0, 0); padding: 3px;">The description of the product</td>
+        </tr>
+        <tr>
+            <td style="width: 25%; border: 2px solid rgb(0, 0, 0); padding: 3px;">
+                <div style="text-align: center;">imgPath</div>
+            </td>
+            <td style="width: 25%; border: 2px solid rgb(0, 0, 0); padding: 3px;">
+                <div style="text-align: center;">str</div>
+            </td>
+            <td style="width: 24.9249%; border: 2px solid rgb(0, 0, 0); padding: 3px;"><br></td>
+            <td style="width: 24.9249%; border: 2px solid rgb(0, 0, 0); padding: 3px;">The path to the product&apos;s image file</td>
+        </tr>
+        <tr>
+            <td style="width: 25%; border: 2px solid rgb(0, 0, 0); padding: 3px;">
+                <div style="text-align: center;">price</div>
+            </td>
+            <td style="width: 25%; border: 2px solid rgb(0, 0, 0); padding: 3px;">
+                <div style="text-align: center;">float</div>
+            </td>
+            <td style="width: 24.9249%; border: 2px solid rgb(0, 0, 0); padding: 3px;"><br></td>
+            <td style="width: 24.9249%; border: 2px solid rgb(0, 0, 0); padding: 3px;">The price of the product</td>
+        </tr>
+        <tr>
+            <td style="width: 25%; border: 2px solid rgb(0, 0, 0); padding: 3px;">
+                <div style="text-align: center;">selectBtn</div>
+            </td>
+            <td style="width: 25%; border: 2px solid rgb(0, 0, 0); padding: 3px;">
+                <div style="text-align: center;">str</div>
+            </td>
+            <td style="width: 24.9249%; border: 2px solid rgb(0, 0, 0); padding: 3px;"><br></td>
+            <td style="width: 24.9249%; border: 2px solid rgb(0, 0, 0); padding: 3px;">What to have as the text on the purchase button. E.g. &quot;BUY&quot;, &quot;ORDER&quot;, &quot;PURCHASE&quot;, &quot;RESERVE&quot;</td>
+        </tr>
+        <tr>
+            <td style="width: 25%; border: 2px solid rgb(0, 0, 0); padding: 3px;">
+                <div style="text-align: center;">stock</div>
+            </td>
+            <td style="width: 25%; border: 2px solid rgb(0, 0, 0); padding: 3px;">
+                <div style="text-align: center;">int</div>
+            </td>
+            <td style="width: 24.9249%; border: 2px solid rgb(0, 0, 0); padding: 3px;"><br></td>
+            <td style="width: 24.9249%; border: 2px solid rgb(0, 0, 0); padding: 3px;">The amount of stock to be sold of this product</td>
+        </tr>
+    </tbody>
+</table>
+<p><br></p>
+<p style="text-align: left;"><strong><strong><strong><span style="font-family: Helvetica;"><strong><span style="font-size: 20px;">.makeProductCardsByArray(arr)</span></strong></span></strong></strong></strong></p>
+<p>Makes product cards from an array of js objects where the properties of each object are the arguments to the makeProductCard method.</p>
+<p><code>[{bgColor: &quot;white&quot;, title: &quot;title&quot;, description: &quot;description&quot;, imgPath: &quot;/images/example.jpeg&quot;, price: 0.0, stock: 3}]</code></p>
+<p><strong><strong><span style="font-family: Helvetica;"><strong><span style="font-size: 20px;">.displayCart()</span></strong></span></strong></strong></p>
+<p>Appends the cart modal to the document body. The displayCartBtn() method has to be calling afterward inorder to have the button to make the modal visible to the end-user.</p>
+<p><strong><strong><strong><strong><strong><span style="font-family: Helvetica;"><strong><span style="font-size: 20px;">.displayCartBtn()</span></strong></span></strong></strong></strong></strong></strong></p>
+<p>Appends the cart button to the document body. It keeps track of how many items the end-user has in their cart and opens the cart modal where they can edit their cart and checkout.</p>
+<p><strong><strong><strong><strong><strong><span style="font-family: Helvetica;"><strong><span style="font-size: 20px;">.setStock(productName, newStock)</span></strong></span></strong></strong></strong></strong></strong></p>
+<p>Finds the product card that matches the productName (a string) and sets its stock attribute to newStock (an int).</p>
+<p><strong><strong><strong><strong><strong><span style="font-family: Helvetica;"><strong><span style="font-size: 20px;">.getCartList()</span></strong></span></strong></strong></strong></strong></strong></p>
+<p>Returns the list of products in the user&apos;s cart. Stylish Library is only a front end library so this function is for updating the backend.</p>
+<p><strong><strong><strong><strong><strong><span style="font-family: Helvetica;"><strong><span style="font-size: 20px;">.setCheckOutFunction(func)</span></strong></span></strong></strong></strong></strong></strong></p>
+<p>Checkout functionality is not a part of this library but setChckOutFunction takes a function and sets it on the checkout button&apos;s onclick function.</p>
+<p><code>testFunc: function() {console.log(test}</code></p>
+<p><code>stylishInstance.setCheckOutFunction(testFunc)</code></p>
+<p><br></p>
+
+</div>
+</body>
+
+</html>

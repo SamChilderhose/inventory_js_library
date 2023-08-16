@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="stylishInventory/library.css">
+ <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+		body, html {
+		  height: 100%;
+		  margin: 0;
+		  font-family: Arial, Helvetica, sans-serif;
+		  background-color: #fff0f0;
+
+		}
+
+		.headerImage {
+		  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("images/clothingHeader.jpeg");
+		  height: 50%;
+		  background-position: center;
+		  background-repeat: no-repeat;
+		  background-size: cover;
+		  position: relative;
+		}
+
+		.imageText {
+		  text-align: center;
+		  position: absolute;
+		  top: 50%;
+		  left: 50%;
+		  transform: translate(-50%, -50%);
+		  color: white;
+		}
+
+		.homePageButton {
+		  border: none;
+		  border-radius: 20px;
+		  outline: 0;
+		  display: inline-block;
+		  padding: 10px 25px;
+		  color: black;
+		  background-color: #ddd;
+		  text-align: center;
+		  cursor: pointer;
+		  font-weight: bold;
+		  color: grey;
+		}
+
+		.homePageButton:hover {
+		  background-color: #555;
+		  color: white;
+		}
+	</style>
+ </head>
+ <body>
+
+ 	<div class="headerImage">
+	  <div class="imageText">
+	    <h1 class="cardFadeIn0" style="font-size:50px">Clothing Store</h1>
+	    <p class="cardFadeIn1">An Example of Stylish Inventory</p>
+	    <a href="homepage.html">
+	    	<button class="homePageButton cardFadeIn2">HOME</button>
+		</a>
+	  </div>
+	</div>
+
+    <script defer type="text/javascript" src='stylishInventory/stylishInventoryLibrary.js'></script>
+    <script defer type="text/javascript" src="clothingStoreExample.js"></script>
+
+ </body>
+
+</html>

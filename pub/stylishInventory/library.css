@@ -1,0 +1,366 @@
+body {
+	font-family: arial;
+}
+
+.productImage {
+	width: 150px;
+}
+
+.productImageContainer {
+	margin: 25px;
+	display: inline-block;
+	float: left;
+}
+
+.productName {
+	float: right;
+}
+
+.productPrice {
+	float: right;
+	display: inline-block;
+}
+
+.productCircle {
+	background-color: lightblue;
+	border-radius: 100%;
+	display: inline-block;
+}
+
+.displayCard {
+	border-style: solid;
+	float: left;
+	margin: 10px;
+	width: 400px;
+	height: 400px;
+}
+
+.displayCardContainer {
+	border: solid;
+	margin-left: auto;
+	margin-right: auto;
+	width: 1000px;
+	display: inline-block;
+}
+
+
+.pageBtn {
+	background-color: #f1f1f1;
+	font-weight: bold; 
+	border-radius: 100%; 
+	padding: 8px 16px; 
+	display: inline-block;
+	margin-top: 0px;
+}
+
+.pageBtn:hover {
+	background-color: #ddd;
+	cursor: pointer;
+}
+.pageBtn:active {
+	background-color: darkgrey;
+}
+
+/* Modal CSS */
+.cartModal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0,0,0); 
+  background-color: rgba(0,0,0,0.4); 
+}
+
+.cartModalContent {
+  background-color: #fefefe;
+  margin: auto;
+  max-width: 500px;
+  height: 450px;
+  padding: 20px;
+  border: 1px solid #888;
+  border-radius: 15px;
+  width: 80%;
+}
+
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.removeFromCartBtn {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  padding-top: 23px;
+}
+
+.removeFromCartBtn:hover,
+.removeFromCartBtn:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.itemInCart {
+  height: 80px;
+  clear: both;
+  margin-bottom: 10px;
+}
+
+.itemInCart:hover {
+	background-color: #f0f0f0;
+	border-radius: 5px;
+}
+
+.itemizedCartList {
+  overflow-y: scroll; 
+  height: 300px; 
+  border-bottom: 1px solid black;
+}
+
+.itemImage {
+  max-width: 50px;
+  margin: 0;
+  top: 50%;
+}
+
+.itemName {
+  padding-top: 10px; 
+  margin-left: 10px; 
+  display: inline-block;
+}
+
+.itemPrice {
+  float: right; 
+  padding-top: 15px; 
+  margin-right: 10px;
+}
+
+.cartTotal {
+  text-align: right; 
+  padding-right: 40px;
+}
+
+.productBtn {
+	width: 60px;
+	height: 20px;
+	cursor: pointer;
+	border: 2px solid black;
+    color: black;
+    background-color: transparent;
+    border-radius: 3px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+
+    background-image: -webkit-linear-gradient(45deg, black 50%, transparent 50%);
+	background-image: linear-gradient(45deg, black 50%, transparent 50%);
+	background-position: 100%;
+	background-size: 400%;
+	-webkit-transition: background 300ms ease-in-out;
+	transition: background 300ms ease-in-out;
+}
+
+.productBtn:hover{
+	color: #fff;
+	outline: 0;
+	background-position: 0;
+}
+
+.productBtn:active {
+	background-image: -webkit-linear-gradient(45deg, white 0%, transparent 100%);
+	color: black;
+}
+
+.checkoutBtn {
+	width: 200px;
+	height: 35px;
+	margin-left: 150px;
+	margin-bottom: 10px;
+	cursor: pointer;
+	border: 2px solid black;
+    color: black;
+    background-color: transparent;
+    border-radius: 3px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+
+    background-image: -webkit-linear-gradient(45deg, black 50%, transparent 50%);
+	background-image: linear-gradient(45deg, black 50%, transparent 50%);
+	background-position: 100%;
+	background-size: 400%;
+	-webkit-transition: background 300ms ease-in-out;
+	transition: background 300ms ease-in-out;
+}
+
+.checkoutBtn:hover {
+	color: #fff;
+	outline: 0;
+	background-position: 0;
+}
+
+.checkoutBtn:active {
+	background-image: -webkit-linear-gradient(45deg, white 50%, transparent 50%);
+	color: black;
+}
+
+.cartBtn {
+  width: 200px;
+  height: 35px;
+  margin-left: 150px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  border: 2px solid black;
+    color: black;
+    background-color: transparent;
+    border-radius: 3px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+
+    background-image: -webkit-linear-gradient(45deg, black 50%, transparent 50%);
+  background-image: linear-gradient(45deg, black 50%, transparent 50%);
+  background-position: 100%;
+  background-size: 400%;
+  -webkit-transition: background 300ms ease-in-out;
+  transition: background 300ms ease-in-out;
+}
+
+.cartBtn:hover {
+  color: #fff;
+  outline: 0;
+  background-position: 0;
+}
+
+.cartBtn:active {
+  background-image: -webkit-linear-gradient(45deg, white 50%, transparent 50%);
+  color: black;
+}
+
+.cardFadeIn0 {
+	animation: fadein ease 2s;
+    -moz-animation: fadein ease 2s; 
+    -webkit-animation: fadein ease 2s; 
+    -o-animation: fadein ease 2s; 
+}
+
+@keyframes fadein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-moz-keyframes fadein { 
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-webkit-keyframes fadein { 
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-o-keyframes fadein { 
+    from {
+        opacity:0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.cardFadeIn1 {
+	animation: fadein ease 3s;
+    -moz-animation: fadein ease 3s; 
+    -webkit-animation: fadein ease 3s; 
+    -o-animation: fadein ease 3s; 
+}
+.cardFadeIn2 {
+	animation: fadein ease 4s;
+    -moz-animation: fadein ease 4s; 
+    -webkit-animation: fadein ease 4s; 
+    -o-animation: fadein ease 4s; 
+}
+.cardFadeIn3 {
+	animation: fadein ease 4s;
+    -moz-animation: fadein ease 4s; 
+    -webkit-animation: fadein ease 4s; 
+    -o-animation: fadein ease 4s; 
+}
+.cardFadeIn4 {
+	animation: fadein ease 5s;
+    -moz-animation: fadein ease 5s; 
+    -webkit-animation: fadein ease 5s; 
+    -o-animation: fadein ease 5s; 
+}
+.cardFadeIn5 {
+	animation: fadein ease 5s;
+    -moz-animation: fadein ease 5s; 
+    -webkit-animation: fadein ease 5s; 
+    -o-animation: fadein ease 5s; 
+}
+
+
+
+#toast {
+  visibility: hidden;
+  width: 200px;
+  margin-left: -125px;
+  background-color: #55bd6a;
+  color: white;
+  bottom: 30px;
+  font-size: 20px;
+  text-align: center;
+  border-radius: 10px;
+  padding: 16px;
+  position: fixed;
+  z-index: 1;
+  left: 50%;
+}
+
+#toast.show {
+  visibility: visible;
+  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+/*@-webkit-keyframes fadein {
+  from {bottom: 0; opacity: 0;} 
+  to {bottom: 30px; opacity: 1;}
+}
+
+@keyframes fadein {
+  from {bottom: 0; opacity: 0;}
+  to {bottom: 30px; opacity: 1;}
+}
+
+@-webkit-keyframes fadeout {
+  from {bottom: 30px; opacity: 1;} 
+  to {bottom: 0; opacity: 0;}
+}
+
+@keyframes fadeout {
+  from {bottom: 30px; opacity: 1;}
+  to {bottom: 0; opacity: 0;}
+}*/

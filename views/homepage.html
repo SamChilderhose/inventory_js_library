@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="stylishInventory/library.css">
+ <head>
+ 	<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+	<meta content="utf-8" http-equiv="encoding">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+ 	<style>
+ 		body, html {
+		  height: 100%;
+		  margin: 0;
+		  font-family: Arial, Helvetica, sans-serif;
+		  background-color: #fffcf7;
+		}
+
+ 		.homepageImage {
+ 			border-radius: 100%;
+ 			width: 500px;
+ 			height: 500px;
+ 			margin: auto;
+ 			display: block;
+ 			z-index: -1;
+ 		}
+
+ 		.homepageTitleFirstHalf {
+			color: white;
+			font-size: 50px;
+			bottom: 360px;
+			right: 517px;
+			position: absolute;
+		}
+
+		.homepageTitleSecondHalf {
+			color: black;
+			font-size: 50px;
+			bottom: 360px;
+			right: 392px;
+			position: absolute;
+		}
+
+		.homepageButton {
+			text-align: center;
+		}
+
+		.exampleBtn {
+			width: 400px;
+			height: 50px;
+			margin: auto;
+			margin-top: 10px;
+			display: block;
+			cursor: pointer;
+			border: 2px solid black;
+		    color: black;
+		    background-color: transparent;
+		    border-radius: 3px;
+		    font-family: 'Montserrat', sans-serif;
+		    font-weight: bold;
+		    font-size: 30px;
+		    text-decoration: none;
+
+		    background-image: -webkit-linear-gradient(45deg, black 50%, transparent 50%);
+			background-image: linear-gradient(45deg, black 50%, transparent 50%);
+			background-position: 100%;
+			background-size: 400%;
+			-webkit-transition: background 300ms ease-in-out;
+			transition: background 300ms ease-in-out;
+		}
+
+		.exampleBtn:hover {
+			color: #fff;
+			outline: 0;
+			background-position: 0;
+		}
+
+		.exampleBtn:active {
+			background-image: -webkit-linear-gradient(45deg, white 50%, transparent 50%);
+			color: black;
+		}
+
+
+ 	</style>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+ </head>
+ <body>
+ 	<script defer type="text/javascript" src='stylishInventoryLibrary.js'></script>
+
+
+ 	<div style="margin-top: 25px;">
+ 		<img class="homepageImage" src="images/homepageImage.jpeg">
+    	<h1 class="homepageTitleFirstHalf cardFadeIn0"> Stylish Inve </h1>
+    	<h1 class="homepageTitleSecondHalf cardFadeIn5"> ntory </h1>
+    </div>
+ 	
+ 	<a style="text-decoration: none;" href="aboutPage.html">
+ 		<button class="exampleBtn"> API / Documentation </button>
+ 	</a>
+ 	<a style="text-decoration: none;" href="https://github.com/csc309-fall-2020/js-library-childer6.git">
+ 		<button class="exampleBtn"> Download </button>
+ 	</a>
+ 	<a style="text-decoration: none;" href="furnitureStoreExample.html">
+ 		<button class="exampleBtn"> Furniture Example </button>
+ 	</a>
+ 	<a style="text-decoration: none;" href="bakeryExample.html">
+ 		<button class="exampleBtn"> Bakery Example </button>
+ 	</a>
+ 	<a style="text-decoration: none;" href="clothingStoreExample.html">
+ 		<button class="exampleBtn"> Clothing Example </button>
+ 	</a>
+
+ </body>
+
+</html>
